@@ -1,10 +1,11 @@
 #include <memory>
+#include <iostream>
 
 class Test
 {
 public:
-   Test():m_value(0) { std::cout << "Test::Test" << std::endl; }
-   ~Test() { std::cout << "Test::~Test destructor" << std::endl; }
+   Test():m_value(0) { std::cout << "Test::Test\n"; }
+   ~Test() { std::cout << "Test::~Test destructor\n"; }
 
    int m_value;
 };
@@ -16,7 +17,7 @@ void doSomethig(std::auto_ptr<Test> myPtr) {
 void AutoPtrTest() {
     std::auto_ptr<Test> myTest(new Test());
     doSomethig(myTest);
-    myTest->m_value = 10;
+    myTest->m_value = 10; // ??
 }
 
 int main()
