@@ -6,13 +6,14 @@ class MyType
 public:
 	MyType() { std::cout << "MyType::MyType\n"; }
 	~MyType() { std::cout << "MyType::~MyType\n"; }
-}
+};
 
 bool process() { return true; }
 bool processSecond() { return true; }
 
-void FuncLeaky()
+void FuncMightLeak()
 {
+	std::cout << "FuncMightLeak\n";
     MyType* pFirst = new MyType();
     
     if (!process())
@@ -38,6 +39,7 @@ void FuncLeaky()
 
 void FuncNoLeaks()
 {
+	std::cout << "FuncNoLeaks\n";
     auto pFirst = std::make_unique<MyType>();
     
     if (!process())
