@@ -1,7 +1,7 @@
 #include "cpp_pimpl.h"
 #include <iostream>
 
-class NetManImpl
+class NetworkManager::NetManImpl
 {
 public:
 	~NetManImpl()
