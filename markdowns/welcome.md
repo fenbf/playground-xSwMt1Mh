@@ -6,6 +6,9 @@
 
 @[pimpl]({"stubs": ["cpp_pimpl.h", "cpp_pimpl.cpp", "cpp_pimpl_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl.cpp cpp_pimpl_client.cpp"})
 
+@[unique_ptr in functions]({"stubs": ["cpp_unique_ptr_func.cpp"],"command": "sh ./run.sh cpp_unique_ptr_func.cpp"})
+
+
 ### Call to action:
 
 This playground is adapted from my blog: [Bartek's coding blog: Enforcing code contracts with nodiscard](http://www.bfilipek.com/2017/11/nodiscard.html)
