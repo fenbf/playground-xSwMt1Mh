@@ -6,7 +6,7 @@ public:
 	NetworkManager();
 	~NetworkManager();
 
-	void Connetct();
+	void Connect();
 	void Disconnect();
 
 private:

@@ -35,10 +35,10 @@ NetworkManager::~NetworkManager() = default;
 
 void NetworkManager::Connect()
 {
-	m_pImpl->Connect():
+	m_pImpl->Connect();
 }
 
 void NetworkManager::Disconnect()
 {
-	m_pImpl->Disconnect():
+	m_pImpl->Disconnect();
 }
