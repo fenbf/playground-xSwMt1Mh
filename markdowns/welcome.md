@@ -4,7 +4,7 @@
 
 @[auto_ptr fail]({"stubs": ["cpp_autoptr_fail.cpp"],"command": "sh ./run.sh cpp_autoptr_fail.cpp"})
 
-@[pimpl]({"stubs": ["ccpp_pimpl.cpp", "cpp_pimpl.h", "cpp_pimpl_client.cpp],"command": "sh ./run_two.sh cpp_pimpl.cpp cpp_pimpl_client.cpp"})
+@[pimpl]({"stubs": ["cpp_pimpl.cpp", "cpp_pimpl.h", "cpp_pimpl_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl.cpp cpp_pimpl_client.cpp"})
 
 ### Call to action:
 
