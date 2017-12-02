@@ -1,11 +1,19 @@
 #include <memory>
+#include <iostream>
+
+class MyType
+{
+public:
+	MyType() { std::cout << "MyType::MyType\n"; }
+	~MyType() { std::cout << "MyType::~MyType\n"; }
+}
 
 bool process() { return true; }
 bool processSecond() { return true; }
 
 void FuncLeaky()
 {
-    int* pFirst = new int(10);
+    MyType* pFirst = new MyType();
     
     if (!process())
     {
@@ -13,7 +21,7 @@ void FuncLeaky()
         return;
     }
     
-    int* pSecond = new int(10);
+    MyType* pSecond = new MyType();
     
     if (!processSecond())
     {
@@ -30,12 +38,12 @@ void FuncLeaky()
 
 void FuncNoLeaks()
 {
-    auto pFirst = std::make_unique<int>(10);
+    auto pFirst = std::make_unique<MyType>();
     
     if (!process())
         return;
     
-    auto pSecond = std::make_unique<int>(10);
+    auto pSecond = std::make_unique<MyType>();
     
     if (!processSecond())
         return;
