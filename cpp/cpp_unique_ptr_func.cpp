@@ -55,6 +55,6 @@ void FuncNoLeaks()
 
 int main()
 {
-	FuncLeaky();
+	FuncMightLeak();
 	FuncNoLeaks();
 }
