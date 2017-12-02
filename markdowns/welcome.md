@@ -8,6 +8,7 @@
 
 @[unique_ptr in functions]({"stubs": ["cpp_unique_ptr_func.cpp"],"command": "sh ./run.sh cpp_unique_ptr_func.cpp"})
 
+@[unique_ptr custom deleter]({"stubs": ["cpp_unique_ptr_custom.cpp", "cpp_unique_ptr_custom.h"],"command": "sh ./run.sh "cpp_unique_ptr_custom.cpp"})
 
 ### Call to action:
 
