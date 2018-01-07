@@ -1,13 +1,13 @@
-#include "cpp_pimpl.h"
+#include "cpp_pimpl2.h"
 #include <iostream>
 
 void* operator new(size_t count) {
-    cout << "allocating " << count << " bytes\n";
+    std::cout << "allocating " << count << " bytes\n";
     return malloc(count);
 }
 
 void operator delete(void* ptr) noexcept {
-    cout << "global op delete called\n";
+    std::cout << "global op delete called\n";
     free(ptr);
 }
 
@@ -16,11 +16,11 @@ class MyClassImpl
 public:
 	~MyClassImpl() = default;
 
-	void DoSth() { std::cout << ++m_val << "\n";}
+	void DoSth() { std::cout << "Val (incremented): " << ++m_val << "\n";}
 	
 	// try to uncomment
 	void DoConst() const { 
-		std::cout << /*++*/m_val << "\n"; 
+		std::cout << "Val: " << /*++*/m_val << "\n"; 
 	} 
 	
 private:
