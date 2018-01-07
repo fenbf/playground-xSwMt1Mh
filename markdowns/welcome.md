@@ -10,6 +10,9 @@
 
 @[unique_ptr custom deleter]({"stubs": ["cpp_unique_ptr_custom.cpp", "cpp_unique_ptr_custom.h"],"command": "sh ./run.sh cpp_unique_ptr_custom.cpp"})
 
+@[Improved pimpl]({"stubs": ["cpp_pimpl2.h", "cpp_pimpl2.cpp", "cpp_pimpl2_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl2.cpp cpp_pimpl_client2.cpp"})
+
+
 ### Call to action:
 
 This playground is adapted from my blog: [Bartek's coding blog: Enforcing code contracts with nodiscard](http://www.bfilipek.com/2017/11/nodiscard.html)
