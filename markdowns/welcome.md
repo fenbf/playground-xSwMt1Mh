@@ -10,7 +10,7 @@
 
 @[unique_ptr custom deleter]({"stubs": ["cpp_unique_ptr_custom.cpp", "cpp_unique_ptr_custom.h"],"command": "sh ./run.sh cpp_unique_ptr_custom.cpp"})
 
-@[Improved pimpl]({"stubs": ["cpp_pimpl2.h", "cpp_pimpl2.cpp", "cpp_pimpl2_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl2.cpp cpp_pimpl_client2.cpp"})
+@[Improved pimpl]({"stubs": ["cpp_pimpl2.h", "cpp_pimpl2.cpp", "cpp_pimpl2_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl2.cpp cpp_pimpl2_client.cpp"})
 
 
 ### Call to action:
