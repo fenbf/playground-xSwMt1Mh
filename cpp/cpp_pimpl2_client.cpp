@@ -6,5 +6,7 @@ int main()
 {
 	MyClass myObject;
 	myObject.DoSth();
-	myObject.DoConst();
+	
+	const MyClass secondObject;
+	secondObject.DoConst();
 }

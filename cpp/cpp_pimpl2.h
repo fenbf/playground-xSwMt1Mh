@@ -11,7 +11,7 @@ public:
 	MyClass(MyClass && rhs) noexcept;   
 	MyClass& operator=(MyClass && rhs) noexcept;
 
-	// and copyable
+	// and copyable:
 	MyClass(const MyClass& rhs);
 	MyClass& operator=(const MyClass& rhs);
 
@@ -19,7 +19,7 @@ public:
 	void DoConst() const;
 
 private:
-	
+	// const access:
 	const MyClassImpl* Pimpl() const { return m_pImpl.get(); }
     MyClassImpl* Pimpl() { return m_pImpl.get(); }
 	

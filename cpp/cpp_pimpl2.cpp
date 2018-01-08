@@ -14,20 +14,22 @@ void operator delete(void* ptr) noexcept {
 class MyClassImpl
 {
 public:
+	MyClassImpl(MyClass* pBackPtr) : m_pMainClass(pBackPtr) { }
 	~MyClassImpl() = default;
 
 	void DoSth() { std::cout << "Val (incremented): " << ++m_val << "\n";}
 	
-	// try to uncomment
+	// try to uncomment (or comment 'const' for the method)
 	void DoConst() const { 
 		std::cout << "Val: " << /*++*/m_val << "\n"; 
 	} 
 	
 private:
 	int m_val {0};
+	MyClass* m_pMainClass {nullptr}; // back pointer
 };
 
-MyClass::MyClass() : m_pImpl(new MyClassImpl()) 
+MyClass::MyClass() : m_pImpl(new MyClassImpl(this)) 
 {
 	std::cout <<  __PRETTY_FUNCTION__ << "\n";
 }
