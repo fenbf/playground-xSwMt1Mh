@@ -12,6 +12,8 @@
 
 @[Improved pimpl]({"stubs": ["cpp_pimpl2.h", "cpp_pimpl2.cpp", "cpp_pimpl2_client.cpp"],"command": "sh ./run_two.sh cpp_pimpl2.cpp cpp_pimpl2_client.cpp"})
 
+@[Propagate const]({"stubs": ["cpp_propagate_const.cpp"],"command": "sh ./run.sh cpp_propagate_const.cpp"})
+
 
 ### Call to action:
 
